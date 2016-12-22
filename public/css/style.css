@@ -1,0 +1,84 @@
+.large-header {
+    position: relative;
+    width: 100%;
+    background: #111;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+}
+
+.demo .large-header {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+}
+
+.main-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #F9F1E9;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.title-text{
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 100%;
+    line-height: 50px;
+}
+
+.demo .main-title {
+    text-transform: uppercase;
+    font-size: 4.2em;
+    letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+    .demo .main-title {
+        font-size: 3em;
+    }
+}
+
+.darkBG{
+    background-color: #212121;
+}
+
+.blueBG{
+    background-color: deepskyblue;
+}
+
+
+ol,ul{
+    list-style: none;
+    padding:0px;
+}
+
+ul li{
+    display: inline-block;
+    list-style: none;
+    width: 42px;
+    height: 42px;
+    background-color: rgba(35,35,35,.9);
+    border-radius: 50%;
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 13px;
+}
+
+ul li i {
+    color:white;
+    font-size: 1.7em;
+    line-height: 17px;
+    text-align: center;
+    top: -3px;
+    position: relative;
+}

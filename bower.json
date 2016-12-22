@@ -1,0 +1,13 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular": "^1.6.0",
+    "angular-route": "latest",
+    "angular-material": "^1.1.1"
+  },
+  "resolutions": {
+    "angular": "1.5.7"
+  }
+}
