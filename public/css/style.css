@@ -1,7 +1,21 @@
+
+body{
+    background: none;
+}
+
+html {
+    background: url("../img/demo-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 .large-header {
     position: relative;
     width: 100%;
-    background: #111;
+    //background: #111;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
@@ -9,7 +23,7 @@
 }
 
 .demo .large-header {
-    background-image: url("../img/demo-bg.jpg");
+    //background-image: url("../img/demo-bg.jpg");
 }
 
 .main-title {
@@ -81,4 +95,341 @@ ul li i {
     text-align: center;
     top: -3px;
     position: relative;
+}
+
+.shadow{
+    transition: all 0.5s ease;
+
+}
+
+.shadow:hover{
+    box-shadow: rgba(0,0,0,0.247059) 0px 14px 45px, rgba(0,0,0,0.219608) 0px 10px 18px;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+#arrow:before {
+    color: rgb(255, 255, 255);
+    content: "\e61c";
+    cursor: pointer;
+    speak: none;
+    text-align: center;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 30px / 30px "Ahoy Icons";
+    outline: rgb(255, 255, 255) none 0px;
+
+}
+
+#arrow{
+    position: absolute;
+    color: #F9F1E9;
+    text-align: center;
+    top: 95%;
+    left: 50%;
+    -webkit-transform: translate3d(-95%, -50%, 0);
+    transform: translate3d(-95%, -50%, 0);
+    webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@font-face {
+    font-family: 'Ahoy Icons';
+    src: url('../fonts/ahoy-icons.woff');
+    font-weight: normal;
+    font-style: normal
+}
+
+.login-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    //background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.login-container.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+.login-container>.login-box {
+    display: block;
+    position: relative;
+    background-color: #fafafa;
+    //background-color: #fff;
+    width: 400px;
+    //border-radius: 3px;
+    overflow: hidden;
+    //-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -moz-transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
+    -o-transform: translateX(0) translateY(0);
+    -ms-transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
+    -moz-transform: translateX(0) translateY(0);
+    -o-transform: translateX(0) translateY(0);
+    -ms-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+.login-container>.login-box.dismissing {
+    -moz-transform: translateX(50%) translateY(0);
+    -webkit-transform: translateX(50%) translateY(0);
+    -o-transform: translateX(50%) translateY(0);
+    -ms-transform: translateX(50%) translateY(0);
+    -webkit-transform: translateX(50%) translateY(0);
+    -moz-transform: translateX(50%) translateY(0);
+    -o-transform: translateX(50%) translateY(0);
+    -ms-transform: translateX(50%) translateY(0);
+    transform: translateX(50%) translateY(0);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+.login-container>.login-box>.login-cover {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background-color: #212121;
+}
+.login-container>.login-box>.login-cover>span {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    margin: 2em 0 4em 0;
+}
+.login-container>.login-box>.login-cover>.login-pp-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    -moz-transform: translateX(0) translateY(50%);
+    -webkit-transform: translateX(0) translateY(50%);
+    -o-transform: translateX(0) translateY(50%);
+    -ms-transform: translateX(0) translateY(50%);
+    -webkit-transform: translateX(0) translateY(50%);
+    -moz-transform: translateX(0) translateY(50%);
+    -o-transform: translateX(0) translateY(50%);
+    -ms-transform: translateX(0) translateY(50%);
+    transform: translateX(0) translateY(50%);
+}
+.login-container>.login-box>.login-cover>.login-pp-container>img.login-pp {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #f5f5f5;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.login-container>.login-box>.login-form {
+    padding: 70px 20px 20px;
+}
+.login-container>.login-box>.login-form>.line {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    font-size: 1.1em;
+    //padding: 1em 0;
+    //color: #212121;
+    color:white;
+}
+.login-container>.login-box>.login-form>.line.centered {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.login-container>.login-box>.login-form>.line>input {
+    font-size: 1.1em;
+    padding: 0.5em 0.8em;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid #727272;
+    outline: none;
+    -webkit-transition: border-bottom 0.4s ease;
+    -moz-transition: border-bottom 0.4s ease;
+    -ms-transition: border-bottom 0.4s ease;
+    -o-transition: border-bottom 0.4s ease;
+    -webkit-transition: border-bottom 0.4s ease;
+    -moz-transition: border-bottom 0.4s ease;
+    -o-transition: border-bottom 0.4s ease;
+    -ms-transition: border-bottom 0.4s ease;
+    transition: border-bottom 0.4s ease;
+}
+.login-container>.login-box>.login-form>.line>input:focus {
+    border-bottom: 2px solid #3f51b5;
+}
+.login-container>.login-box>.login-form>.line>input:hover,
+.login-container>.login-box>.login-form>.line>input :focus,
+.login-container>.login-box>.login-form>.line>input :active {
+    outline: none;
+}
+.login-container>.login-box>.login-form>.line>img.pp-select {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #f5f5f5;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.login-container>.login-box>.login-form>.line>button {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    padding: 0 !important;
+    background-color: #607d8b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+.login-container>.login-box>.login-form>.line>button>i {
+    display: inline;
+    font-size: 1.4em;
+    margin-left: 0.5em;
+}
+
+.coolFont{
+    font-weight: 100 !important;
+    font-family: Futura,'Trebuchet MS',Arial,sans-serif !important;
+    font-style: normal !important;
+}
+
+.transparent {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+md-tabs.md-skillsTheme-theme .md-tab{
+    color: rgba(255, 255, 255, 0.54);
+}
+
+.whiteText{
+    color:white;
 }

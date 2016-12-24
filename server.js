@@ -5,6 +5,15 @@ var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 
+var cluster = require('cluster');
+var http = require('http');
+var os = require('os');
+
+var numCPUs = os.cpus().length;
+
+
+
+
 // configuration ===========================================
 	
 // config files
@@ -25,6 +34,22 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 require('./app/routes')(app); // pass our application into our routes
 
 // start app ===============================================
-app.listen(port);	
+//app.listen(port);
+
+
+if (cluster.isMaster) {
+    for (var i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
+
+    cluster.on("exit", function(worker, code, signal) {
+        cluster.fork();
+    });
+} else {
+    var server = http.createServer(app,function(req,res){
+    }).listen(port);
+}
+
+console.log("Node running at "+os.type()+" OS, with: "+numCPUs+" cores");
 console.log('Magic happens on port ' + port); 			// shoutout to the user
 exports = module.exports = app; 						// expose app
