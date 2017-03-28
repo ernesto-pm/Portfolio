@@ -5,7 +5,7 @@ angular.module('sampleApp', [
 ]).config(function ($mdThemingProvider) {
     var customPrimary = {
         '50': '#ffffff',
-        '100': '#ffffff',
+        '100': '#9E9F9E',
         '200': '#ffffff',
         '300': '#ffffff',
         '400': '#ffffff',

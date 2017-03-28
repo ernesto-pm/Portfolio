@@ -433,3 +433,8 @@ md-tabs.md-skillsTheme-theme .md-tab{
 .whiteText{
     color:white;
 }
+
+.titlePadding{
+    padding-right: 15px;
+    padding-left: 15px;
+}
